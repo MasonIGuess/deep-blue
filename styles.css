@@ -1,0 +1,729 @@
+/* =====================================================
+   Deep Blue — one stylesheet shared by every page
+   ===================================================== */
+
+
+/* ---------- Page basics ---------- */
+
+body {
+  /* Colors from the Figma design */
+  --page-background: #000136;
+  --white-border: #e2e8ff;
+  --light-text: #e2e8ff;
+  --header-blue: #1d2b6c;
+  --band-blue: #053885;
+  --band-border: #00025e;
+  --button-dark: #181e35;
+  --button-border: #adbfff;
+  --button-hover-dark: #0b0d18;
+  --button-hover-border: #7c8ab9;
+  --accent: #8f9bd0;
+  --accent-two: #6ea2dd;
+  --circle-gray: #d9d9d9;
+  --circle-border: #021343;
+  --back-red: #820000;
+  --back-red-border: #360000;
+  --confirm-green: #1a8505;
+  --confirm-green-border: #02430c;
+
+  width: 1416px;
+  margin: 0 auto;
+  background-color: var(--page-background);
+  border: 12px solid var(--white-border);
+  color: white;
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 24px;
+}
+
+/* Every heading uses the big display font */
+.big-heading {
+  margin: 0;
+  font-family: "Jaini Purva", sans-serif;
+  font-weight: 400;
+  font-size: 128px;
+  line-height: 0.8;
+}
+
+p {
+  margin: 0;
+}
+
+
+/* ---------- Header (same on every page) ---------- */
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 216px;
+  padding-left: 23px;
+  background-color: var(--header-blue);
+  border: 9px solid var(--button-border);
+}
+
+/* The home button swaps to a second picture when you hover over it */
+.home-link {
+  display: block;
+  width: 170px;
+  height: 165px;
+  background-image: url("images/home-button-hover.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.home-button {
+  display: block;
+  width: 170px;
+  height: 165px;
+}
+
+.home-link:hover .home-button {
+  opacity: 0;
+}
+
+.nav-list {
+  display: flex;
+  gap: 69px;
+  margin: 0 0 0 62px;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  width: 203px;
+  height: 69px;
+  background-color: var(--button-dark);
+  border: 9px solid var(--button-border);
+  color: white;
+  font-family: "Jaini Purva", sans-serif;
+  font-size: 64px;
+  line-height: 69px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  border-color: var(--header-blue);
+  color: var(--header-blue);
+}
+
+
+/* ---------- Buttons ---------- */
+
+/* Rounded button used on the Home page */
+.button {
+  display: block;
+  width: 468px;
+  height: 122px;
+  background-color: var(--button-dark);
+  border: 9px solid var(--button-border);
+  border-radius: 48px;
+  color: white;
+  font-family: "Jaini Purva", sans-serif;
+  font-size: 64px;
+  line-height: 122px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button:hover {
+  border-color: var(--header-blue);
+  color: var(--header-blue);
+}
+
+/* Big "Get Tickets" button on the Tickets page */
+.ticket-button {
+  display: block;
+  width: 688px;
+  height: 120px;
+  background-color: var(--button-dark);
+  border: 12px solid var(--button-border);
+  border-radius: 52px;
+  color: var(--light-text);
+  font-family: "Jaini Purva", sans-serif;
+  font-size: 128px;
+  line-height: 108px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.ticket-button:hover {
+  background-color: var(--button-hover-dark);
+  border-color: var(--button-hover-border);
+}
+
+/* Pill buttons on the Checkout page */
+.confirm-button {
+  display: block;
+  width: 286px;
+  height: 72px;
+  background-color: var(--header-blue);
+  border: 10px solid var(--button-dark);
+  border-radius: 46px;
+  color: white;
+  font-family: "Jaini Purva", sans-serif;
+  font-size: 64px;
+  line-height: 72px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.confirm-button:hover {
+  background-color: var(--button-dark);
+  border-color: var(--accent);
+}
+
+.back-button {
+  display: block;
+  width: 286px;
+  height: 72px;
+  background-color: var(--back-red);
+  border: 10px solid var(--back-red-border);
+  border-radius: 46px;
+  color: white;
+  font-family: "Jaini Purva", sans-serif;
+  font-size: 64px;
+  line-height: 72px;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+/* ---------- Footer (same on every page) ---------- */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 97px 0 19px 0;
+}
+
+.footer-image {
+  display: block;
+  width: 410px;
+  height: 317px;
+  object-fit: cover;
+  opacity: 0.41;
+  box-shadow: 0 4px 4px #6ea2dd, inset 0 4px 4px #00025e;
+}
+
+
+/* ---------- Title band (top of Tickets, Brand, Sets, About) ---------- */
+
+.title-band {
+  margin-top: 51px;
+  padding: 7px 0 11px 0;
+  background-color: var(--header-blue);
+  border: 10px solid var(--button-border);
+  color: var(--light-text);
+  text-align: center;
+}
+
+.title-text {
+  width: 993px;
+  margin: 25px auto 0 auto;
+}
+
+/* Full-width band with one heading inside (Brand page) */
+.section-band {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 145px;
+  margin-top: 72px;
+  background-color: var(--header-blue);
+  border: 10px solid var(--button-border);
+  color: var(--light-text);
+}
+
+
+/* =====================================================
+   HOME PAGE
+   ===================================================== */
+
+/* ---------- Blue bands (each section with a heading) ---------- */
+
+.band {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--band-blue);
+  border-top: 10px solid var(--band-border);
+  border-bottom: 10px solid var(--band-border);
+}
+
+/* Heading + small text stacked and centered */
+.band-text {
+  width: 750px;
+  text-align: center;
+}
+
+.band-text p {
+  margin-top: 34px;
+}
+
+.intro-band {
+  flex-direction: column;
+  justify-content: center;
+  height: 260px;
+  margin-top: 130px;
+}
+
+.intro-text {
+  width: 770px;
+  margin-top: 36px;
+  text-align: center;
+}
+
+/* ---------- Logo circle ---------- */
+
+.logo-area {
+  display: flex;
+  justify-content: center;
+  padding: 19px 0 81px 0;
+}
+
+.logo-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 688px;
+  height: 688px;
+  background-color: var(--button-border);
+  border: 24px solid var(--header-blue);
+  border-radius: 50%;
+}
+
+/* The logo is wider than the circle, so it is allowed to stick out */
+.logo {
+  flex-shrink: 0;
+  width: 792px;
+  height: 612px;
+  object-fit: cover;
+}
+
+/* ---------- Individual bands ---------- */
+
+.tickets-band {
+  height: 205px;
+  padding-left: 27px;
+  padding-right: 69px;
+}
+
+.brand-band {
+  height: 205px;
+  margin-top: 124px;
+  padding-left: 66px;
+  padding-right: 10px;
+}
+
+.brand-text {
+  width: 780px;
+}
+
+.brand-band .band-text p {
+  margin-top: 22px;
+}
+
+.sets-band {
+  height: 205px;
+  margin-top: 124px;
+  padding-left: 27px;
+  padding-right: 69px;
+}
+
+/* ---------- Merch ---------- */
+
+.merch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 65px;
+  padding-left: 27px;
+  padding-right: 99px;
+}
+
+.merch-photo {
+  display: block;
+  width: 490px;
+  height: 698px;
+  border: 15px solid var(--band-border);
+  object-fit: cover;
+}
+
+
+/* =====================================================
+   TICKETS PAGE
+   ===================================================== */
+
+/* One rounded card for each ticket tier */
+.tier {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 50px auto 0 auto;
+  padding: 40px 50px 30px 10px;
+  background-color: var(--header-blue);
+  border: 10px solid var(--button-border);
+  border-radius: 103px;
+  color: var(--light-text);
+}
+
+/* Tier 2 is flipped: photo on the left, text on the right */
+.tier-flipped {
+  flex-direction: row-reverse;
+  padding: 40px 10px 30px 50px;
+}
+
+.tier-one {
+  width: 1116px;
+}
+
+.tier-two {
+  width: 1171px;
+}
+
+.tier-three {
+  width: 1185px;
+}
+
+/* Tier name + list of what you get */
+.tier-info {
+  width: 398px;
+  text-align: center;
+}
+
+.tier-list {
+  margin: 28px 0 0 0;
+  padding: 0;
+  list-style-position: inside;
+}
+
+/* Photo + Get Tickets button stacked */
+.tier-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 59px;
+}
+
+.tier-photo {
+  display: block;
+  border: 15px solid var(--button-border);
+  object-fit: cover;
+}
+
+.tier-photo-one {
+  width: 582px;
+  height: 378px;
+}
+
+.tier-photo-two {
+  width: 669px;
+  height: 436px;
+}
+
+.tier-photo-three {
+  width: 710px;
+  height: 464px;
+}
+
+
+/* =====================================================
+   CHECKOUT + CONFIRMATION PAGES
+   ===================================================== */
+
+.dialog {
+  width: 851px;
+  height: 320px;
+  margin: 100px auto 0 auto;
+  padding-top: 45px;
+  background-color: var(--accent);
+  border: 26px solid var(--header-blue);
+  text-align: center;
+}
+
+.dialog-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  margin-top: 71px;
+}
+
+.confirmed {
+  width: 946px;
+  height: 156px;
+  margin: 100px auto 0 auto;
+  padding-top: 30px;
+  background-color: var(--confirm-green);
+  border: 26px solid var(--confirm-green-border);
+  color: var(--light-text);
+  text-align: center;
+}
+
+.thanks-text {
+  margin-top: 40px;
+  color: var(--light-text);
+  text-align: center;
+}
+
+
+/* =====================================================
+   BRAND PAGE
+   ===================================================== */
+
+/* "The Palette" label box (only part of the page width) */
+.palette-label {
+  display: flex;
+  align-items: center;
+  width: 659px;
+  height: 145px;
+  margin: 87px 0 0 4px;
+  padding-left: 84px;
+  background-color: var(--header-blue);
+  border: 10px solid var(--button-border);
+  color: var(--light-text);
+}
+
+.palette {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin: 57px 0 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* One color: square on top, name and hex code under it */
+.swatch {
+  width: 253px;
+  color: var(--light-text);
+  font-family: "Jaini Purva", sans-serif;
+  font-size: 64px;
+  text-align: center;
+}
+
+.swatch-color {
+  width: 227px;
+  height: 227px;
+  margin-bottom: 20px;
+  border: 13px solid var(--white-border);
+}
+
+.swatch-primary {
+  background-color: var(--header-blue);
+}
+
+.swatch-secondary {
+  background-color: var(--button-dark);
+}
+
+.swatch-accent {
+  background-color: var(--accent);
+}
+
+.swatch-accent-two {
+  background-color: var(--accent-two);
+}
+
+.brand-logo-area {
+  display: flex;
+  justify-content: center;
+  margin-top: 41px;
+}
+
+.brand-logo-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 630px;
+  height: 630px;
+  background-color: var(--circle-gray);
+  border: 16px solid var(--circle-border);
+  border-radius: 50%;
+}
+
+/* Four pieces of extra artwork, two per row */
+.media {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 68px;
+}
+
+.media-image {
+  display: block;
+  width: 50%;
+  height: auto;
+}
+
+
+/* =====================================================
+   SETS PAGE
+   ===================================================== */
+
+/* Set times on the left, artist photos on the right */
+.sets-layout {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 51px;
+}
+
+.set-times {
+  width: 648px;
+  min-height: 1437px;
+  margin-left: 4px;
+  padding: 17px 26px;
+  background-color: var(--header-blue);
+  border: 10px solid var(--button-border);
+}
+
+.set-list {
+  margin: 0;
+  padding: 0 0 0 96px;
+  font-family: "Jaini Purva", sans-serif;
+  font-size: 64px;
+}
+
+/* Two columns of photos that start at different heights */
+.artist-photos {
+  display: flex;
+  gap: 33px;
+}
+
+.photo-column {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.photo-column-left {
+  align-items: flex-end;
+  margin-top: 314px;
+}
+
+.photo-column-right {
+  margin-top: 65px;
+}
+
+.artist-photo {
+  display: block;
+  border: 14px solid var(--header-blue);
+  object-fit: cover;
+}
+
+.artist-photo-one {
+  width: 311px;
+  height: 311px;
+}
+
+.artist-photo-two {
+  width: 251px;
+  height: 251px;
+}
+
+.artist-photo-three {
+  width: 350px;
+  height: 224px;
+}
+
+.artist-photo-four {
+  width: 241px;
+  height: 308px;
+}
+
+.artist-photo-five {
+  width: 314px;
+  height: 314px;
+}
+
+.artist-photo-six {
+  width: 206px;
+  height: 270px;
+}
+
+.entry {
+  margin-top: 89px;
+  padding-bottom: 20px;
+  background-color: var(--header-blue);
+  border: 10px solid var(--button-border);
+  color: var(--light-text);
+  text-align: center;
+}
+
+.entry-list {
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
+  font-family: "Jaini Purva", sans-serif;
+  font-size: 64px;
+}
+
+
+/* =====================================================
+   ABOUT PAGE
+   ===================================================== */
+
+.about-card {
+  display: flex;
+  height: 681px;
+  margin-top: 41px;
+  background-color: var(--header-blue);
+  border: 10px solid var(--button-border);
+  border-radius: 103px;
+}
+
+.about-logo-circle {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 475px;
+  height: 475px;
+  margin: 105px 0 0 76px;
+  background-color: var(--circle-gray);
+  border-radius: 50%;
+}
+
+.about-logo {
+  flex-shrink: 0;
+  width: 597px;
+  height: 461px;
+  object-fit: cover;
+}
+
+.summary-text {
+  width: 748px;
+  margin: 51px 0 0 61px;
+}
+
+.summary-text .big-heading {
+  text-align: center;
+}
+
+.summary-text p {
+  margin-top: 51px;
+}
+
+.creator-photo {
+  display: block;
+  flex-shrink: 0;
+  width: 402px;
+  height: 660px;
+  margin-left: 49px;
+  border: 12px solid var(--button-border);
+  border-radius: 112px;
+  object-fit: cover;
+  object-position: 100% 0;
+}
+
+.creator-text {
+  margin: 48px 0 0 14px;
+}
+
+.creator-text .big-heading {
+  white-space: nowrap;
+}
+
+.creator-text p {
+  width: 748px;
+  margin: 75px 0 0 123px;
+}

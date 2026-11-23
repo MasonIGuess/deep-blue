@@ -1,0 +1,223 @@
+/* ---------- Page basics ---------- */
+
+body {
+  /* Colors from the Figma design */
+  --page-background: #000136;
+  --white-border: #e2e8ff;
+  --header-blue: #1d2b6c;
+  --band-blue: #053885;
+  --band-border: #00025e;
+  --button-dark: #181e35;
+  --button-border: #adbfff;
+
+  margin: 0;
+  background-color: var(--page-background);
+  border: 12px solid var(--white-border);
+  color: white;
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 24px;
+}
+
+/* Every heading uses the big display font */
+.big-heading {
+  margin: 0;
+  font-family: "Jaini Purva", sans-serif;
+  font-weight: 400;
+  font-size: 128px;
+  line-height: 0.8;
+}
+
+p {
+  margin: 0;
+}
+
+
+/* ---------- Header ---------- */
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 16px 32px;
+  background-color: var(--header-blue);
+  border-bottom: 25px solid var(--button-border);
+}
+
+.home-button {
+  display: block;
+  width: 170px;
+  height: 165px;
+}
+
+.nav-list {
+  display: flex;
+  gap: 36px;
+  margin: 0 0 0 46px;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  width: 236px;
+  height: 110px;
+  background-color: var(--button-dark);
+  border: 9px solid var(--button-border);
+  color: white;
+  font-family: "Jaini Purva", sans-serif;
+  font-size: 64px;
+  line-height: 110px;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+/* ---------- Buttons ---------- */
+
+.button {
+  display: block;
+  width: 468px;
+  height: 122px;
+  background-color: var(--button-dark);
+  border: 9px solid var(--button-border);
+  border-radius: 48px;
+  color: white;
+  font-family: "Jaini Purva", sans-serif;
+  font-size: 64px;
+  line-height: 122px;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+/* ---------- Blue bands (each section with a heading) ---------- */
+
+.band {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--band-blue);
+  border-top: 10px solid var(--band-border);
+  border-bottom: 10px solid var(--band-border);
+}
+
+/* Heading + small text stacked and centered */
+.band-text {
+  width: 750px;
+  text-align: center;
+}
+
+.band-text p {
+  margin-top: 34px;
+}
+
+
+/* ---------- Intro band ---------- */
+
+.intro-band {
+  flex-direction: column;
+  justify-content: center;
+  height: 260px;
+  margin-top: 130px;
+}
+
+.intro-text {
+  width: 770px;
+  margin-top: 36px;
+  text-align: center;
+}
+
+
+/* ---------- Logo circle ---------- */
+
+.logo-area {
+  display: flex;
+  justify-content: center;
+  padding: 19px 0 81px 0;
+}
+
+.logo-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 736px;
+  height: 736px;
+  background-image: url("images/circle.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.logo {
+  flex-shrink: 0;
+  width: 792px;
+  height: 612px;
+  object-fit: cover;
+}
+
+
+/* ---------- Individual bands ---------- */
+
+.tickets-band {
+  height: 205px;
+  padding-left: 27px;
+  padding-right: 69px;
+}
+
+.brand-band {
+  height: 205px;
+  margin-top: 124px;
+  padding-left: 66px;
+  padding-right: 10px;
+}
+
+.brand-text {
+  width: 780px;
+}
+
+.brand-band .band-text p {
+  margin-top: 22px;
+}
+
+.sets-band {
+  height: 205px;
+  margin-top: 124px;
+  padding-left: 27px;
+  padding-right: 69px;
+}
+
+
+/* ---------- Merch ---------- */
+
+.merch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 65px;
+  padding-left: 27px;
+  padding-right: 99px;
+}
+
+.merch-photo {
+  display: block;
+  width: 490px;
+  height: 698px;
+  border: 15px solid var(--band-border);
+  object-fit: cover;
+}
+
+
+/* ---------- Footer ---------- */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 97px 0 19px 0;
+}
+
+.footer-image {
+  display: block;
+  width: 410px;
+  height: 317px;
+  object-fit: cover;
+  opacity: 0.41;
+  box-shadow: 0 4px 4px #6ea2dd, inset 0 4px 4px #00025e;
+}
